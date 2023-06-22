@@ -2,10 +2,10 @@
 A simple app for in-oganization staff recruitment
 
 ## Table of Content
-*[General Info](#general-info)
-*[Setup and Installation ](#setup-and-installation)
-*[Database Setup](#database-setup)
-*[Code Setup and Running](#code-setup-and-running)
+* [General Info](#general-info)
+* [Setup and Installation ](#setup-and-installation)
+* [Database Setup](#database-setup)
+* [Code Setup and Running](#code-setup-and-running)
 
 ## General-Info
 This project is a simple in-oganization staff recruitment application

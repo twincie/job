@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-top: 50px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+
+    input[type="radio"] {
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+    <h1>Job Exam</h1>
+  <form action="/job-application/<%= jobId %>/exam" method="POST">
+    <% examQuestions.forEach(question => { %>
+      <h3><%= question.text %></h3>
+      <% question.answers.forEach(answer => { %>
+        <input type="radio" name="<%= question.id %>" value="<%= answer %>"><%= answer %><br>
+      <% }) %>
+    <% }) %>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
